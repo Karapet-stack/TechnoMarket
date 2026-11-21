@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — TechnoMarket</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="header"></header>
+
+<main class="catalog-page">
+    <div class="catalog-heading">
+        <div>
+            <h1>Каталог товарів</h1>
+            <p>Знайди техніку для роботи, навчання та розваг</p>
+        </div>
+    </div>
+
+    <div class="catalog-layout">
+
+        <aside class="catalog-sidebar">
+            <h2>Категорії</h2>
+
+            <button class="sidebar-category active" data-category="all">
+                <span>▦</span> Усі товари
+            </button>
+
+            <div class="sidebar-group">
+                <button class="sidebar-category" data-category="pc">
+                    <span>▣</span> Комп'ютери
+                    <span class="arrow">⌄</span>
+                </button>
+                <div class="sidebar-subcategories">
+                    <button data-subcategory="gaming-pc">Ігрові ПК</button>
+                    <button data-subcategory="office-pc">Офісні ПК</button>
+                    <button data-subcategory="monoblock">Моноблоки</button>
+                </div>
+            </div>
+
+            <div class="sidebar-group">
+                <button class="sidebar-category" data-category="laptop">
+                    <span>▱</span> Ноутбуки
+                    <span class="arrow">⌄</span>
+                </button>
+                <div class="sidebar-subcategories">
+                    <button data-subcategory="gaming-laptop">Ігрові ноутбуки</button>
+                    <button data-subcategory="work-laptop">Для роботи</button>
+                    <button data-subcategory="study-laptop">Для навчання</button>
+                </div>
+            </div>
+
+            <div class="sidebar-group">
+                <button class="sidebar-category" data-category="parts">
+                    <span>▤</span> Комплектуючі
+                    <span class="arrow">⌄</span>
+                </button>
+                <div class="sidebar-subcategories">
+                    <button data-subcategory="gpu">Відеокарти</button>
+                    <button data-subcategory="cpu">Процесори</button>
+                    <button data-subcategory="motherboard">Материнські плати</button>
+                    <button data-subcategory="ram">Оперативна пам'ять</button>
+                    <button data-subcategory="storage">SSD та HDD</button>
+                    <button data-subcategory="power">Блоки живлення</button>
+                    <button data-subcategory="cooling">Охолодження</button>
+                </div>
+            </div>
+
+            <div class="sidebar-group">
+                <button class="sidebar-category" data-category="parts">
+                    <span>▣</span> Монітори
+                    <span class="arrow">⌄</span>
+                </button>
+                <div class="sidebar-subcategories">
+                    <button data-subcategory="monitor">Усі монітори</button>
+                </div>
+            </div>
+
+            <div class="sidebar-group">
+                <button class="sidebar-category" data-category="parts">
+                    <span>⌨</span> Периферія
+                    <span class="arrow">⌄</span>
+                </button>
+                <div class="sidebar-subcategories">
+                    <button data-subcategory="keyboard">Клавіатури</button>
+                    <button data-subcategory="mouse">Миші</button>
+                    <button data-subcategory="headphones">Навушники</button>
+                    <button data-subcategory="speakers">Колонки</button>
+                </div>
+            </div>
+
+            <div class="sidebar-group">
+                <button class="sidebar-category unavailable">
+                    <span>⌁</span> Мережеве обладнання
+                    <span class="arrow">⌄</span>
+                </button>
+                <div class="sidebar-subcategories">
+                    <p class="coming-soon">Інформація готується</p>
+                </div>
+            </div>
+
+            <div class="sidebar-group">
+                <button class="sidebar-category unavailable">
+                    <span>▧</span> Програмне забезпечення
+                    <span class="arrow">⌄</span>
+                </button>
+                <div class="sidebar-subcategories">
+                    <p class="coming-soon">Інформація готується</p>
+                </div>
+            </div>
+
+        </aside>
+
+        <section class="catalog-content">
+
+            <div class="catalog-toolbar">
+                <div class="catalog-search">
+                    <input type="text" id="search"
+                           placeholder="Пошук товарів...">
+                </div>
+
+                <select id="sort">
+                    <option value="default">За замовчуванням</option>
+                    <option value="cheap">Спочатку дешевші</option>
+                    <option value="expensive">Спочатку дорожчі</option>
+                    <option value="name">За назвою</option>
+                </select>
+            </div>
+
+            <div class="catalog-results">
+                <h2 id="catalog-title">Усі товари</h2>
+                <span id="products-count"></span>
+            </div>
+
+            <div id="products" class="products-grid"></div>
+
+        </section>
+    </div>
+</main>
+
+<footer id="footer"></footer>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик — TechnoMarket</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="header"></header>
+
+<main class="container section">
+    <h1>Кошик покупок</h1>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-total">
+        <h2>Разом: <span id="cart-total">0 ₴</span></h2>
+        <button id="checkout-button">Оформити замовлення</button>
+    </div>
+
+    <form id="checkout-form" class="checkout-form" hidden>
+        <h2>Дані для замовлення</h2>
+
+        <label for="customer-name">Ваше ім'я</label>
+        <input id="customer-name" type="text" required>
+
+        <label for="customer-phone">Телефон</label>
+        <input id="customer-phone" type="tel" required>
+
+        <label for="customer-email">Електронна пошта</label>
+        <input id="customer-email" type="email" required>
+
+        <label for="customer-address">Адреса доставки</label>
+        <textarea id="customer-address" required></textarea>
+
+        <button type="submit">Підтвердити замовлення</button>
+    </form>
+
+    <p id="order-message"></p>
+</main>
+
+<footer id="footer"></footer>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script src="js/cart.js"></script>
+
+</body>
+</html>
